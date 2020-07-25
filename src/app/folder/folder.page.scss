@@ -12,17 +12,37 @@ ion-menu-button {
 }
 
 #container strong {
-  font-size: 20px;
+  font-size: 3em;
   line-height: 26px;
 }
 
 #container p {
-  font-size: 16px;
+  font-size: 1.5em;
   line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
+  color: var(--azul-escuro);
+  margin-top:3vh ;
 }
 
 #container a {
   text-decoration: none;
+}
+
+.toolbar{
+  --background: var(--azul-claro);
+}
+
+.logo {
+  height: 6vh;
+  margin-left:-14vw;
+  margin-right:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.capitalize {
+  color: var(--amarelo);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3em;
+  font-weight: 600;
+  margin: 10% 3% 5%;
 }

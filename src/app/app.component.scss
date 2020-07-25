@@ -1,5 +1,15 @@
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(--branco);
+}
+
+ion-list {
+  --background: var(--branco);
+}
+
+.logo {
+  height: 8vh;
+  left: -10vw;
+  margin-bottom: 3vh;
 }
 
 ion-menu.md ion-content {
@@ -27,18 +37,20 @@ ion-menu.md ion-list#inbox-list {
 }
 
 ion-menu.md ion-list#inbox-list ion-list-header {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 600;
-
+  margin-top: 10%;
+  color: var(--amarelo);
+  font-family: 'Ubuntu', sans-serif;
   min-height: 20px;
 }
 
 ion-menu.md ion-list#labels-list ion-list-header {
-  font-size: 16px;
+  font-size: 18px;
 
   margin-bottom: 18px;
 
-  color: #757575;
+  color: white;
 
   min-height: 26px;
 }
@@ -50,11 +62,11 @@ ion-menu.md ion-item {
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  --background: var(--azul-claro);
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: var(--azul-medio);
 }
 
 ion-menu.md ion-item ion-icon {
@@ -63,6 +75,8 @@ ion-menu.md ion-item ion-icon {
 
 ion-menu.md ion-item ion-label {
   font-weight: 500;
+  color: var(--azul-negro);
+  font-family: 'Montserrat', sans-serif;
 }
 
 ion-menu.ios ion-content {
@@ -90,7 +104,7 @@ ion-menu.ios ion-item.selected ion-icon {
 
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: var(--branco);
 }
 
 ion-menu.ios ion-list#labels-list ion-list-header {

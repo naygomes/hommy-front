@@ -1,0 +1,60 @@
+.toolbar{
+    --background: var(--azul-claro);
+}
+
+.logo {
+    height: 6vh;
+    margin-left:-14vw;
+    margin-right:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo {
+    color: var(--amarelo);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 10% 3% 0;
+}
+
+.subtitulo {
+    color: var(--azul-escuro);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0 3% 0; 
+}
+
+.title {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--azul-escuro);
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    color: var(--azul-negro);
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: justify;
+}
+
+.price {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+    color: var(--amarelo);
+}
+
+.button {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
