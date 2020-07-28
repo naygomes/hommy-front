@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { url } from 'inspector';
-import { homedir } from 'os';
 
 class Republica {
   name:string;
@@ -36,8 +34,8 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.republicas = [
       {
-      name: "Republica Universitária",
-      address: "Ilha do Fundão, RJ",
+      name: "República Universitária",
+      address: "Cidade Universitária, RJ",
       price: 450.00,
       details: "Suítes individuais, com água, luz e internet inclusa. Não aceitamos animais. Pagamento do primeiro mês adiantado. Agende já sua visita!",
       photo: "../assets/home.jpg",

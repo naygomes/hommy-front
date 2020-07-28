@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'favoritas',
     loadChildren: () => import('./favoritas/favoritas.module').then( m => m.FavoritasPageModule)
+  },
+  {
+    path: 'anuncio-republica',
+    loadChildren: () => import('./anuncio-republica/anuncio-republica.module').then( m => m.AnuncioRepublicaPageModule)
   }
 ];
 

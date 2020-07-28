@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img class="logo" src="../assets/logo-completa-hommy---escuro.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let anuncio of anuncios">
+  <ion-grid class="content">
+    <ion-row class="header">
+      <h4 class="titulo"> {{anuncio.title}} </h4>
+      <ion-img class="photo" [src]="anuncio.photo" alt="Foto da República"></ion-img>
+    </ion-row>
+    <ion-row>
+      <ion-col class="location" size="8">
+        <ion-row>
+          <h5> {{anuncio.city}} </h5>
+          <h6> {{anuncio.address}} </h6>
+          <p> {{anuncio.cep}} </p>
+        </ion-row>
+      </ion-col>
+      <ion-col class="price" size="4">
+        <ion-row class="ion-justify-content-end">
+          <ion-icon size="large" name="heart-outline"></ion-icon>
+        </ion-row>
+        <ion-row class="ion-justify-content-end">
+          <h6> R${{anuncio.price}},00 </h6>
+        </ion-row>
+        <ion-row class="ion-justify-content-end">
+          <ion-chip color="branco">
+            <ion-icon color="amarelo" name="star"></ion-icon>
+            <ion-label>{{anuncio.stars}}</ion-label>
+          </ion-chip>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="details">
+      <h6>Descrição:</h6>
+      <p>
+        {{anuncio.details}}
+      </p>
+    </ion-row>
+  </ion-grid>
+  <ion-button expand="block" size="large" shape="round">Alugar Quarto</ion-button>
+</ion-content>

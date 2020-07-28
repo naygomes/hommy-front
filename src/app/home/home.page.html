@@ -13,7 +13,7 @@
   <h5 class="subtitulo"> Melhores Preços </h5>
   <ion-slides>
 
-    <ion-slide *ngFor="let republica of republicas">
+    <ion-slide *ngFor="let republica of republicas" routerLink="/anuncio-republica">
       <ion-card>
         <img [src]="republica.photo"/>
         <ion-card-header>
@@ -31,7 +31,7 @@
   <ion-grid>
     <ion-row>
       
-      <ion-col size="6" *ngFor="let proxima of proximas">
+      <ion-col size="6" *ngFor="let proxima of proximas" routerLink="/anuncio-republica">
         <div>
           <ion-card>
             <img [src]="proxima.photo"/>
