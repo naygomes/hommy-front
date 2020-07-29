@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-icon size="large" name="chevron-back-outline" routerLink="/home"></ion-icon>
+  <ion-img src="../assets/cadastro.png"></ion-img>
+</ion-header>
+
+<ion-content>
+  <h4> Por favor, preencha os dados para continuar.</h4>
+
+  <div class="form">
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+      <ion-list>
+
+        <ion-item>
+          <ion-input placeholder="Nome Completo" type="text" formControlName="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Data de nascimento" type="text" formControlName="birth" [brmasker]="{mask:'00/00/0000', len:10}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="E-mail" type="text" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Senha" type="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Confirme a senha" type="password" formControlName="confirmPassword"></ion-input>
+        </ion-item>
+
+      </ion-list>
+      <ion-button type="submit" expand="block" size="large" shape="round" [disabled]="registerForm.invalid">Finalizar</ion-button>
+    </form>
+  </div>
+
+</ion-content>

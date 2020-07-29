@@ -22,6 +22,18 @@ const routes: Routes = [
   {
     path: 'anuncio-republica',
     loadChildren: () => import('./anuncio-republica/anuncio-republica.module').then( m => m.AnuncioRepublicaPageModule)
+  },
+  {
+    path: 'cadastro-usuario',
+    loadChildren: () => import('./cadastro-usuario/cadastro-usuario.module').then( m => m.CadastroUsuarioPageModule)
+  },
+  {
+    path: 'cadastro-republica',
+    loadChildren: () => import('./cadastro-republica/cadastro-republica.module').then( m => m.CadastroRepublicaPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
 ];
 

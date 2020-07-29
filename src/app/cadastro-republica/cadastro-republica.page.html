@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img class="logo" src="../assets/logo-completa-hommy---escuro.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="add">
+    <h4 class="titulo"> Anunciar República</h4>
+    <ion-img src="../assets/midia.png"></ion-img>
+  </div>
+  <div class="form">
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+      <ion-list>
+
+        <ion-item>
+          <ion-input placeholder="Título" type="text" formControlName="title"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Endereço" type="text" formControlName="address"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="CEP" type="text" formControlName="cep" [brmasker]="{mask:'00000-000', len:9}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Cidade" type="text" formControlName="city"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Preço (R$)" type="text" formControlName="price" [brmasker]="{money:true}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Descreva sua república" type="text" formControlName="details"></ion-input>
+        </ion-item>
+
+      </ion-list>
+      <ion-button type="submit" expand="block" size="large" shape="round" [disabled]="registerForm.invalid">Finalizar</ion-button>
+    </form>
+  </div>
+
+</ion-content>

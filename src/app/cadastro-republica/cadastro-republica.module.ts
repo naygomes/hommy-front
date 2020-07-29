@@ -5,19 +5,19 @@ import { BrMaskerModule } from 'br-mask';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AnuncioRepublicaPageRoutingModule } from './anuncio-republica-routing.module';
+import { CadastroRepublicaPageRoutingModule } from './cadastro-republica-routing.module';
 
-import { AnuncioRepublicaPage } from './anuncio-republica.page';
+import { CadastroRepublicaPage } from './cadastro-republica.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AnuncioRepublicaPageRoutingModule,
+    CadastroRepublicaPageRoutingModule,
     ReactiveFormsModule,
     BrMaskerModule
   ],
-  declarations: [AnuncioRepublicaPage]
+  declarations: [CadastroRepublicaPage]
 })
-export class AnuncioRepublicaPageModule {}
+export class CadastroRepublicaPageModule {}

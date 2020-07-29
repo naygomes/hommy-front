@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-icon size="large" name="chevron-back-outline" routerLink="/home"></ion-icon>
+  <ion-img src="../assets/login.png"></ion-img>
+</ion-header>
+
+<ion-content>
+  <h4> Acesse sua conta.</h4>
+
+  <div class="form">
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+      <ion-list>
+
+        <ion-item>
+          <ion-input placeholder="E-mail" type="text" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Senha" type="password" formControlName="password"></ion-input>
+        </ion-item>
+
+      </ion-list>
+      <ion-button type="submit" expand="block" size="large" shape="round" [disabled]="registerForm.invalid">Finalizar</ion-button>
+    </form>
+  </div>
+</ion-content>

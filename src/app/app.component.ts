@@ -23,14 +23,19 @@ export class AppComponent implements OnInit {
       icon: 'heart'
     },
     {
-      title: 'Meu perfil',
-      url: '/folder/Meu perfil',
-      icon: 'person'
+      title: 'Entrar',
+      url: '/login',
+      icon: 'log-in'
     },
     {
-      title: 'Notificações',
-      url: '/folder/Notificações',
-      icon: 'warning'
+      title: 'Cadastrar',
+      url: '/cadastro-usuario',
+      icon: 'clipboard'
+    },
+    {
+      title: 'Anunciar República',
+      url: '/cadastro-republica',
+      icon: 'add'
     },
     {
       title: 'Categorias',

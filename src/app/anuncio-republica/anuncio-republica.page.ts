@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 class Anuncio {
   title:string;
@@ -22,7 +23,19 @@ class Anuncio {
 })
 export class AnuncioRepublicaPage implements OnInit {
   anuncios: Anuncio[];
-  constructor() { }
+
+  registerForm: FormGroup;
+
+  submitForm(form) {
+    console.log(form);
+    console.log(form.value);
+  }
+
+  constructor(public formbuilder:FormBuilder) {
+    this.registerForm = this.formbuilder.group({
+      comment:[null,[Validators.required]]
+    });
+  }
 
   ngOnInit() {
     this.anuncios = [
