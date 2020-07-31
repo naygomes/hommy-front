@@ -11,7 +11,7 @@
 
   <h4 class="titulo"> Olá! </h4>
   <h5 class="subtitulo"> Melhores Preços </h5>
-  <ion-slides>
+  <ion-slides pager="true"[options]="slideOpts">
 
     <ion-slide *ngFor="let republica of republicas" routerLink="/anuncio-republica">
       <ion-card>

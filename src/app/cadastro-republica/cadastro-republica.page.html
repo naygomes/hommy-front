@@ -8,12 +8,19 @@
 </ion-header>
 
 <ion-content>
-  <div class="add">
+  <div class="top">
     <h4 class="titulo"> Anunciar República</h4>
-    <ion-img src="../assets/midia.png"></ion-img>
+    <img class="photo" [src]="photo">
+    <ion-fab class="media" horizontal="center">
+      <ion-fab-button (click)="takePicture()">
+        <ion-icon size="large" name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
   </div>
   <div class="form">
+
     <form [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+
       <ion-list>
 
         <ion-item>
