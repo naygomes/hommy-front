@@ -4,6 +4,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
+import { ToastController } from '@ionic/angular';
+
 @Component({
   selector: 'app-cadastro-republica',
   templateUrl: './cadastro-republica.page.html',
@@ -19,7 +21,8 @@ export class CadastroRepublicaPage implements OnInit {
   }
 
   constructor(public formbuilder:FormBuilder,
-              private sanitizer: DomSanitizer) {
+              private sanitizer: DomSanitizer,
+              private toastController: ToastController) {
     this.registerForm = this.formbuilder.group({
       title:[null,[Validators.required]],
       city:[null,[Validators.required]],
@@ -34,6 +37,7 @@ export class CadastroRepublicaPage implements OnInit {
   ngOnInit() {
   }
 
+  //Função Acessar Câmera e Fotos
   async takePicture() {
     const image = await Plugins.Camera.getPhoto({
       quality: 100,
@@ -44,6 +48,20 @@ export class CadastroRepublicaPage implements OnInit {
     });
 
     this.photo = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.dataUrl));
+  }
+
+  //Função Toast
+  async presentToast(message:string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  //Função click
+  async toast() {
+    await this.presentToast('República Cadastrada!');
   }
   
 }

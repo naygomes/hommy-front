@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 class Favorita {
   name:string;
   address:string;
@@ -13,7 +14,9 @@ class Favorita {
   styleUrls: ['./favoritas.page.scss'],
 })
 export class FavoritasPage implements OnInit {
+  
   favoritas: Favorita[];
+
   constructor() { }
 
   ngOnInit() {

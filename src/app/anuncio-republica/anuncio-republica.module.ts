@@ -6,8 +6,8 @@ import { BrMaskerModule } from 'br-mask';
 import { IonicModule } from '@ionic/angular';
 
 import { AnuncioRepublicaPageRoutingModule } from './anuncio-republica-routing.module';
-
 import { AnuncioRepublicaPage } from './anuncio-republica.page';
+
 
 @NgModule({
   imports: [

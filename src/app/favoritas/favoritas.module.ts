@@ -8,6 +8,8 @@ import { FavoritasPageRoutingModule } from './favoritas-routing.module';
 
 import { FavoritasPage } from './favoritas.page';
 
+import { MiniCardComponent } from '../components/mini-card/mini-card.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { FavoritasPage } from './favoritas.page';
     IonicModule,
     FavoritasPageRoutingModule
   ],
-  declarations: [FavoritasPage]
+  declarations: [FavoritasPage, MiniCardComponent]
 })
 export class FavoritasPageModule {}
