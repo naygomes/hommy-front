@@ -1,5 +1,5 @@
-<div>
-    <ion-card>
+<div class="card">
+    <ion-card routerLink="/anuncio-republica">
     <img [src]="favorita.photo"/>
     <ion-card-header>
         <ion-card-title class="title">{{favorita.name}}</ion-card-title>
@@ -7,4 +7,5 @@
         <ion-card-title class="price">R${{favorita.price}}</ion-card-title>
     </ion-card-header>
     </ion-card>
+    <ion-button class="button" expand="block" (click)='aluga()'>{{button}}</ion-button>
 </div>

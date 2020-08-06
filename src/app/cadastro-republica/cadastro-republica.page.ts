@@ -59,7 +59,7 @@ export class CadastroRepublicaPage implements OnInit {
     toast.present();
   }
 
-  //Função click
+  //Função para chamar o toast
   async toast() {
     await this.presentToast('República Cadastrada!');
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ToastController } from '@ionic/angular';
 
 class Favorita {
   name:string;
@@ -17,7 +18,7 @@ export class FavoritasPage implements OnInit {
   
   favoritas: Favorita[];
 
-  constructor() { }
+  constructor(private toastController: ToastController) { }
 
   ngOnInit() {
     
@@ -44,6 +45,22 @@ export class FavoritasPage implements OnInit {
       photo: "../assets/home.jpg",
       } 
     ];
+  }
+
+  //Função Toast
+  async presentToast(message:string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  
+
+  async handleEvent(event:any) {
+    console.log("Evento Recebido");
+    await  this.presentToast(event);
   }
 
 }

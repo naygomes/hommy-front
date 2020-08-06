@@ -11,8 +11,8 @@
   <h4 class="titulo"> Favoritas </h4>
     <ion-grid>
       <ion-row>
-        <ion-col size="6" *ngFor="let favorita of favoritas"  routerLink="/anuncio-republica">
-            <app-mini-card [favorita]="favorita"></app-mini-card>
+        <ion-col size="6" *ngFor="let favorita of favoritas">
+            <app-mini-card (buttonPressed)='handleEvent($event)' [favorita]="favorita"></app-mini-card>
         </ion-col> 
       </ion-row>
     </ion-grid>
